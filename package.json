@@ -2,7 +2,10 @@
     "private": true,
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "box:start":"docker-compose up -d",
+        "box:stop":"docker-compose down",
+        "box:ssh":  "docker exec -it web_app bash"
     },
     "devDependencies": {
         "axios": "^0.27",
