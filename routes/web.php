@@ -24,5 +24,5 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 Route::get('/products',function(){
-    return view('products');
+    return view('products.products');
 });
