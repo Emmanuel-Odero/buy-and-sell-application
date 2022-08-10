@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body class="bg-gray-50">
+    {{-- Header Starts--}}
     <nav>
         <div class="flex justify-between p-6 items-center">
             <div>
@@ -36,6 +37,8 @@
             </div>
         </div>
     </nav>
+    {{-- Header Ends--}}
+    {{-- Main Content Begins --}}
     <div class="grid grid-cols-4 gap-4 p-6">
         @for ($i = 0; $i < 12; $i++)
         <div class="bg-white rounded shadow overflow-hidden">
@@ -48,11 +51,14 @@
             </div>
         @endfor
     </div>
+    {{-- Main Content Ends --}}
+    {{-- Footer Begins --}}
     <div class="flex justify-between px-2 py-4 items-center border-t m-4 text-sm text-gray-500">
         <div>Proudly made Using Laravel</div>
         <div>
             Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
         </div>
     </div>
+    {{-- Footer Ends --}}
 </body>
 </html>
