@@ -26,3 +26,6 @@ require __DIR__.'/auth.php';
 Route::get('/products',function(){
     return view('products.products');
 });
+Route::get('/product/{id}', function(){
+    return view('products.product');
+});
