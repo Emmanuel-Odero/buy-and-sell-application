@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use PhpParser\Node\Expr\FuncCall;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +23,6 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
 Route::get('/products',function(){
     return view('products.products');
 });
@@ -32,3 +32,5 @@ Route::get('/product/{id}', function(){
 Route::get('/sell', function(){
     return view('products.sell');
 });
+Route::post('/product', [ProductsController::class,'store']);
+require __DIR__.'/auth.php';
