@@ -23,6 +23,7 @@
             <div>
                 @if (Route::has('login'))
                 <div>
+                    <a href="{{ url('/sell') }}" class="text-sm text-gray-700 dark:text-gray-500 underline mr-4">Sell</a>
                     @auth
                         <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
                     @else
