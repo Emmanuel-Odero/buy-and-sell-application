@@ -29,3 +29,6 @@ Route::get('/products',function(){
 Route::get('/product/{id}', function(){
     return view('products.product');
 });
+Route::get('/sell', function(){
+    return view('products.sell');
+});
