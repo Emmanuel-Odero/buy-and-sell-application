@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProductsController extends Controller
 {
@@ -23,8 +24,18 @@ class ProductsController extends Controller
             'product-img'=>'Product Image'            
         ]);
         //upload the image
-        $path=$request->file('product_img')->store('UserProductsImages');
-        dd($path);
+        $path=$request->file('product-img')->store('UserProductsImages');
+        //dd($path);
         //Insert data into the products table
+        $product = new Product();
+        $product->title=$request->input('title');
+        $product->short_desc=$request->input('desc-sm');
+        $product->full_desc=$request->input('desc-full');
+        $product->price=$request->input('price');
+        $product->image_url=$path;
+        $product->user_id=Auth::id();
+        // dd($product);
+        $product->save();
+        return redirect('/product/'.$product->id);
     }
 }
