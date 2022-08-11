@@ -17,20 +17,20 @@
                     <input type="text" name="title" id="title" class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 w-full">
                 </div>
                 <div class="mt-2">
-                    <label for="desc_sm" class="text-sm text-gray-500">Add Short Description Of The Product</label>
-                    <input type="text" name="desc_sm" id="desc_sm" class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 w-full">
+                    <label for="desc-sm" class="text-sm text-gray-500">Add Short Description Of The Product</label>
+                    <input type="text" name="desc-sm" id="desc-sm" class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 w-full">
                 </div>
                 <div class="mt-2">
-                    <label for="desc_full" class="text-sm text-gray-500">Add Complete Details Of The Product</label>
-                    <textarea type="text" name="desc_full" id="desc_full" class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 w-full"></textarea>
+                    <label for="desc-full" class="text-sm text-gray-500">Add Complete Details Of The Product</label>
+                    <textarea type="text" name="desc-full" id="desc-full" class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 w-full"></textarea>
                 </div>
                 <div class="mt-2">
-                    <label for="Price" class="text-sm text-gray-500">Product Price</label>
+                    <label for="price" class="text-sm text-gray-500">Product Price</label>
                     <input type="text" name="price" id="price" class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 w-full">
                 </div>
                 <div class="mt-2">
-                    <label for="product_img" class="text-sm text-gray-500">Upload Product Image</label>
-                    <input type="file" name="product_img" id="product_img" class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 w-full">
+                    <label for="product-img" class="text-sm text-gray-500">Upload Product Image</label>
+                    <input type="file" name="product-img" id="product-img" class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 w-full">
                 </div>
                 <x-button class="mt-4 w-full justify-center">
                    Post the Product 
