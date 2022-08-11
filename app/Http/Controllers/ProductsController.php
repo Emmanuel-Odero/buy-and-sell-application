@@ -11,16 +11,16 @@ class ProductsController extends Controller
         //validate the inputs
         $request->validate([
             'title'=>'required',
-            'desc_sm'=>'required',
-            'desc_full'=>'required',
+            'desc-sm'=>'required',
+            'desc-full'=>'required',
             'price'=>'required|numeric',
-            'product_img'=>'required'
+            'product-img'=>'required'
         ],[],[
             'title'=>'Product Title',
-            'desc_sm'=>'Product Short Description',
-            'desc_full'=>'Product Full Description',
+            'desc-sm'=>'Product Short Description',
+            'desc-full'=>'Product Full Description',
             'price'=>'Product Price',
-            'product_img'=>'Product Image'            
+            'product-img'=>'Product Image'            
         ]);
         //upload the image
         $path=$request->file('product_img')->store('UserProductsImages');
