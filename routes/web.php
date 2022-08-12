@@ -31,6 +31,6 @@ Route::get('/product/{id}', function(){
 });
 Route::get('/sell', function(){
     return view('products.sell');
-});
+})->middleware('auth');
 Route::post('/product', [ProductsController::class,'store']);
 require __DIR__.'/auth.php';
