@@ -3,8 +3,8 @@
     <div class="grid grid-cols-4 gap-4 p-6">
         @foreach ($products as $product)
         <a href="/product/{{$product->id}}">
-            <div class="bg-white rounded shadow overflow-hidden">
-                <img src="{{$product->image_url}}">
+            <div class="bg-white rounded shadow overflow-hidden h-80">
+                    <img src="{{$product->image_url}}" class="object-cover w-full">
                 <div class="p-4">
                     <div class="text-sm font-semibold">{{$product->title}}</div>
                     <div class="text-xs text-gray-500">{{$product->short_desc}}</div>

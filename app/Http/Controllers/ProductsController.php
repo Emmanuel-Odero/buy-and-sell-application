@@ -7,10 +7,16 @@ use Illuminate\Support\Facades\Auth;
 
 class ProductsController extends Controller
 {
-    //Fetch Data From Database
+    //Fetch Product From Database
     public function index(){
         $products = Product::all();
         return view('products.products')->with('products',$products);
+    }
+    //Show Details Of single Product
+    public function show($id){
+        $product = Product::find($id);
+        //dd($product);
+        return view('products.product')->with('product', $product);
     }
     //store products
     public function store(Request $request){
@@ -41,6 +47,6 @@ class ProductsController extends Controller
         $product->user_id=Auth::id();
         // dd($product);
         $product->save();
-        return redirect('/product'.$product->id);
+        return redirect('/product/'.$product->id);
     }
 }

@@ -2,17 +2,15 @@
     {{-- Main Content Begins --}}
     <div class="flex m-4">
         <div class="w-1/2 rounded shadow overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Ymx1ZXRvb3RoJTIwZWFycGhvbmV8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60" alt="Product detail" class="object-cover w-full">
+            <img src="{{ asset($product->image_url )}}" alt="{{$product->title}}" class="object-cover w-full">
         </div>
         <div class="w-1/2 rounded bg-white ml-2 p-4 relative">
-            <div class="font-semi-bold">Headphone</div>
+            <div class="font-semi-bold">{{$product->title}}</div>
             <div class="text-sm text-gray-500">
-                Excellent quality headphones at low cost.
+                {{$product->short_desc}}
             </div>
             <div class="text-xs text-gray-500">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus doloremque itaque natus eos porro? Nobis, accusantium. Rem, illo eius. Dolor laudantium minus temporibus repellendus id tempore adipisci expedita exercitationem suscipit.
-                <br>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quasi consequuntur iure dolorum itaque quia ut molestiae iste soluta eveniet, incidunt ratione officia ullam sequi explicabo assumenda aperiam et fugiat!
+                {{$product->full_desc}}
             </div>
             <div class="mt-4">
                 <div class="text-xs font-semi-bold text-gray">Sold by:</div>
