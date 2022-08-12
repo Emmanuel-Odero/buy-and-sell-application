@@ -36,6 +36,6 @@ class ProductsController extends Controller
         $product->user_id=Auth::id();
         // dd($product);
         $product->save();
-        return redirect('/product/'.$product->id);
+        return redirect('/product'.$product->id);
     }
 }
