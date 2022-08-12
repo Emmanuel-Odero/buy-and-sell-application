@@ -7,6 +7,11 @@ use Illuminate\Support\Facades\Auth;
 
 class ProductsController extends Controller
 {
+    //Fetch Data From Database
+    public function index(){
+        $products = Product::all();
+        return view('products.products')->with('products',$products);
+    }
     //store products
     public function store(Request $request){
         //validate the inputs
