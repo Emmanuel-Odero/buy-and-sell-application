@@ -2,7 +2,7 @@
     {{-- Main Content Begins --}}
     <div class="flex m-4">
         <div class="w-1/2 rounded shadow overflow-hidden">
-            <img src="{{ asset($product->image_url )}}" alt="{{$product->title}}" class="object-cover w-full">
+            <img src="{{ asset($product->image_url )}}" alt="{{$product->title}}" class="object-cover h-100 w-full">
         </div>
         <div class="w-1/2 rounded bg-white ml-2 p-4 relative">
             <div class="font-semi-bold">{{$product->title}}</div>
