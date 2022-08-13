@@ -14,12 +14,12 @@
             </div>
             <div class="mt-4">
                 <div class="text-xs font-semi-bold text-gray">Sold by:</div>
-                <div class="text-sm text-gray-500">John Doe</div>
+                <div class="text-sm text-gray-500">{{$product->user->name}}</div>
             </div>
             <div class="mt-2">
                 <div class="text-xs">Phone Number:</div>
                 @auth
-                    <div class="text-sm text-gray-500">+2547 000 1112 33</div>
+                    <div class="text-sm text-gray-500">{{$product->user->phoneNumber}}</div>
                 @else
                     <div class="text-sm text-gray-500">*******<a class="text-xs text-blue-500" href="/login">Login to check</a></div>
                 @endauth
@@ -27,7 +27,7 @@
             <div class="mt-2">
                 <div class="text-xs">Email:</div>
                 @auth
-                    <div class="text-sm text-gray-500">johndoe@mail.com</div>
+                    <div class="text-sm text-gray-500">{{$product->user->email}}</div>
                 @else
                   <div class="text-sm text-gray-500">******<a class="text-xs text-blue-500" href="/login">Login to check</a></div>
                 @endauth
