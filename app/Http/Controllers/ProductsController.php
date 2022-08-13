@@ -56,4 +56,10 @@ class ProductsController extends Controller
         $product = Product::where('user_id',Auth::id())->orderBy('created_at','desc')->paginate();
         return view('dashboard')->with('product',$product);
     }
+
+    public function Edit($id)
+    {
+        $product = Product::find($id);
+        return view('products.edit-product')->with('product',$product);
+    }
 }

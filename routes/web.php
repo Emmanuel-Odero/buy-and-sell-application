@@ -27,4 +27,5 @@ Route::get('/sell', function(){
     return view('products.sell');
 })->middleware('auth');
 Route::post('/product', [ProductsController::class,'store']);
+Route::get('/edit/{id}', [ProductsController::class,'edit']);
 require __DIR__.'/auth.php';

@@ -8,10 +8,10 @@
             @if (Auth::id()== $product->user->id)
                 <div class="flex mb-2" >
                     <a href="/edit/{{$product->id}}">
-                        <input class="bg-blue-500 rounded-full px-4 py-2 shadow text-sm text-white" type="button" value="Delete">
+                        <input class="bg-blue-500 rounded-full px-4 py-2 shadow text-sm text-white" type="button" value="Edit">
                     </a>
                     <a href="/delete/{{$product->id}}">
-                        <input class="ml-2 bg-red-400 rounded-full px-4 py-2 shadow text-xs text-white" type="button" value="Edit">
+                        <input class="ml-2 bg-red-400 rounded-full px-4 py-2 shadow text-xs text-white" type="button" value="Delete">
                     </a>
                 </div>
             @endif
