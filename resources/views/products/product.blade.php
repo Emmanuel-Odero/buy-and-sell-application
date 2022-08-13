@@ -34,7 +34,7 @@
             </div>
             <div>
                 <div class="absolute bottom-0 right-0 m-6 rounded-full py-2 px-4 bg-green-500">
-                    <div class="text-white font-bold text-sm">$20</div>
+                    <div class="text-white font-bold text-sm">KSH {{$product->price}}</div>
                 </div>
             </div>
         </div>
