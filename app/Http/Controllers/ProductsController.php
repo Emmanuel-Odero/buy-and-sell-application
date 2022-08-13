@@ -9,7 +9,7 @@ class ProductsController extends Controller
 {
     //Fetch Product From Database
     public function index(){
-        $products = Product::all();
+        $products = Product::orderBy('created_at','desc')->get();
         return view('products.products')->with('products',$products);
     }
     //Show Details Of single Product
