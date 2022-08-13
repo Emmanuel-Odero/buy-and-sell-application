@@ -48,5 +48,12 @@ class ProductsController extends Controller
         // dd($product);
         $product->save();
         return redirect('/product/'.$product->id);
+        //Show sellers own Product
+    }
+    public function ShowOwnProduct()
+    {
+        # code...
+        $product = Product::where('user_id',Auth::id())->orderBy('created_at','desc')->paginate();
+        return view('dashboard')->with('product',$product);
     }
 }

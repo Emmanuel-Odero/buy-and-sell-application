@@ -5,4 +5,4 @@
     </div>
     {{-- Main Content Ends --}}
     <div class="p-6">{{$products->links()}}</div>
-</x-base-layout>    
+</x-base-layout>
