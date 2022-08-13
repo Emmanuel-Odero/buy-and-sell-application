@@ -2,9 +2,19 @@
     {{-- Main Content Begins --}}
     <div class="flex m-4">
         <div class="w-1/2 rounded shadow overflow-hidden">
-            <img src="{{ asset($product->image_url )}}" alt="{{$product->title}}" class="object-cover w-full">
+            <img src="{{ asset($product->image_url )}}" alt="{{$product->title}}" class="object-cover h-100 w-full">
         </div>
         <div class="w-1/2 rounded bg-white ml-2 p-4 relative">
+            @if (Auth::id()== $product->user->id)
+                <div class="flex mb-2" >
+                    <a href="/edit/{{$product->id}}">
+                        <input class="bg-blue-500 rounded-full px-4 py-2 shadow text-sm text-white" type="button" value="Delete">
+                    </a>
+                    <a href="/delete/{{$product->id}}">
+                        <input class="ml-2 bg-red-400 rounded-full px-4 py-2 shadow text-xs text-white" type="button" value="Edit">
+                    </a>
+                </div>
+            @endif
             <div class="font-semi-bold">{{$product->title}}</div>
             <div class="text-sm text-gray-500">
                 {{$product->short_desc}}

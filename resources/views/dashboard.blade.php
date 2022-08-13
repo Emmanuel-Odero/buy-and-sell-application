@@ -6,12 +6,20 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    You're logged in!
-                </div>
-            </div>
+        <div class="p-6 bg-white border-b border-gray-200">
+            @if (sizeof($product))
+                You are currently selling {{sizeof($product)}} products.
+                <a class="text-xxs text-blue-500" href="/sell">Click to Sell More Items</a></div>
+            @else
+                You have not added any Items for sale.
+                <a class="text-xxs text-blue-500" href="/sell">Sell Items</a></div>
+            @endif
         </div>
+        {{-- Main Content Begins --}}
+    <div class="grid grid-cols-4 gap-4 p-6">
+        @each('products.each-product-on-list', $product, 'product'),
+    </div>
+    {{-- Main Content Ends --}}
+    <div class="p-6">{{$product->links()}}</div>
     </div>
 </x-app-layout>
