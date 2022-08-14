@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use PhpParser\Node\Stmt\If_;
 
 class ProductsController extends Controller
 {
@@ -61,5 +62,25 @@ class ProductsController extends Controller
     {
         $product = Product::find($id);
         return view('products.edit-product')->with('product',$product);
+    }
+    public function update(Request $request, $id){
+        $request->validate([
+            'price'=>'numeric',
+        ]);
+        $product=Product::find($id);
+        if ($request->hasFile('product-img')) {
+            $path=$request->file('product-img')->store('image_url');
+        }
+        if (!empty($request->input('title'))) {
+            $product->title=$request->input('title');
+        }
+        if (!empty($request->input('desc-sm'))) {
+            $product->short_desc=$request->input('desc-sm');
+        }
+        if (!empty($request->input('full_desc'))) {
+            $product->full_desc=$request->input('desc-full');
+        }
+        $product->save();
+        return redirect('/product/'.$product->id);
     }
 }
