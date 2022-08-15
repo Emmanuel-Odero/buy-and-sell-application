@@ -3,6 +3,7 @@
 use PhpParser\Node\Expr\FuncCall;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductsController;
+use App\Models\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,4 +29,5 @@ Route::get('/sell', function(){
 })->middleware('auth');
 Route::post('/product', [ProductsController::class,'store']);
 Route::get('/edit/{id}', [ProductsController::class,'edit']);
+Route::get('/update/{id}',[ProductsController::class,'update']);
 require __DIR__.'/auth.php';
