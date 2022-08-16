@@ -30,6 +30,10 @@
                 </div>
                 <div class="mt-2">
                     <label for="product-img" class="text-sm text-gray-500">Upload Product Image</label>
+                    {{-- <small> To Update the Product Image Upload the Image and </small>
+
+                    <input type="text" name="price" id="price" value="{{$product->image_url}}" class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 w-full"> --}}
+
                     <input type="file" name="product-img" id="product-img" class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 w-full">
                 </div>
                 <x-button class="mt-4 w-full justify-center">
