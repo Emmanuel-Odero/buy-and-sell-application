@@ -30,4 +30,5 @@ Route::get('/sell', function(){
 Route::post('/product', [ProductsController::class,'store']);
 Route::get('/edit/{id}', [ProductsController::class,'edit']);
 Route::get('/update/{id}',[ProductsController::class,'update']);
+Route::get('/delete/{id}',[ProductsController::class,'destroy']);
 require __DIR__.'/auth.php';

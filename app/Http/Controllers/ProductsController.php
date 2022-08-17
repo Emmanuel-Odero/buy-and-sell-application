@@ -83,4 +83,10 @@ class ProductsController extends Controller
         $product->save();
         return redirect('/product/'.$product->id);
     }
+    public function destroy($id)
+    {
+        $product=Product::find($id);
+        $product->delete();
+        return redirect()->action([ProductsController::class,'ShowOwnProduct']);
+    }
 }

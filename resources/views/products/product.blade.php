@@ -10,9 +10,14 @@
                     <a href="/edit/{{$product->id}}">
                         <input class="bg-blue-500 rounded-full px-4 py-2 shadow text-sm text-white" type="button" value="Edit">
                     </a>
-                    <a href="/delete/{{$product->id}}">
-                        <input class="ml-2 bg-red-400 rounded-full px-4 py-2 shadow text-xs text-white" type="button" value="Delete">
-                    </a>
+                    
+                    {{-- <form action="/delete/{{$product->id}}" method="POST">
+                    @csrf --}}
+                        <a href="/delete/{{$product->id}}">
+                            <input class="ml-2 bg-red-400 rounded-full px-4 py-2 shadow text-xs text-white" type="submit" value="Delete">
+                        </a>
+                    {{-- </form> --}}
+
                 </div>
             @endif
             <div class="font-semi-bold">{{$product->title}}</div>
