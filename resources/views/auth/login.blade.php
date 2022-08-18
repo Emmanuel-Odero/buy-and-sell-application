@@ -45,6 +45,9 @@
                     <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
                         {{ __('Forgot your password?') }}
                     </a>
+                    <a class="underline text-sm text-gray-600 hover:text-gray-900 m-2" href="{{ route('register') }}">
+                        {{ __('Register Here') }}
+                    </a>
                 @endif
 
                 <x-button class="ml-3">
