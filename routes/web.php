@@ -28,7 +28,7 @@ Route::get('/sell', function(){
     return view('products.sell');
 })->middleware('auth');
 Route::post('/product', [ProductsController::class,'store']);
-Route::get('/edit/{id}', [ProductsController::class,'edit']);
+Route::get('/edit/{id}', [ProductsController::class,'edit'])->middleware(['auth','verified_seller']);
 Route::get('/update/{id}',[ProductsController::class,'update']);
 Route::get('/delete/{id}',[ProductsController::class,'destroy']);
 require __DIR__.'/auth.php';
